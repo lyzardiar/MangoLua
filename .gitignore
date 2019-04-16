@@ -1,0 +1,13 @@
+*.log
+*.o
+*.swp
+*.symbols
+*.vcxproj.user
+*.vs
+*.tlog
+*.obj
+*.ilk
+*.log
+*.pdb
+*.idb
+*.enc
