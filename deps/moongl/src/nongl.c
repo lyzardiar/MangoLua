@@ -148,7 +148,7 @@ PACK_INTEGERS(GLint)
 PACK_INTEGERS(GLuint)
 PACK_INTEGERS(GLshort)
 PACK_INTEGERS(GLushort)
-PACK_INTEGERS(GLfixed)
+//PACK_INTEGERS(GLfixed)
 PACK_INTEGERS(GLhalf)
 
 
@@ -186,7 +186,7 @@ static int Pack(lua_State *L)
         case GL_UNSIGNED_INT:               P(GLuint); break;
         case GL_INT_2_10_10_10_REV:
         case GL_INT:                        P(GLint); break;
-        case GL_FIXED:                      P(GLfixed); break;
+        //case GL_FIXED:                      P(GLfixed); break;
         case GL_HALF_FLOAT:                 P(GLhalf); break;
         case GL_FLOAT:                      P(GLfloat); break;
         case GL_DOUBLE:                     P(GLdouble); break;
@@ -236,7 +236,7 @@ UNPACK_INTEGERS(GLint)
 UNPACK_INTEGERS(GLuint)
 UNPACK_INTEGERS(GLshort)
 UNPACK_INTEGERS(GLushort)
-UNPACK_INTEGERS(GLfixed)
+//UNPACK_INTEGERS(GLfixed)
 UNPACK_INTEGERS(GLhalf)
 
 
@@ -267,7 +267,7 @@ static int Unpack_(lua_State *L, GLenum type, const void *data, size_t len)
         case GL_UNSIGNED_INT:       err = UnpackGLuint(L, data, len); break;
         case GL_INT_2_10_10_10_REV:
         case GL_INT:        err = UnpackGLint(L, data, len); break;
-        case GL_FIXED:          err = UnpackGLfixed(L, data, len); break;
+        //case GL_FIXED:          err = UnpackGLfixed(L, data, len); break;
         case GL_HALF_FLOAT:         err = UnpackGLhalf(L, data, len); break;
         case GL_FLOAT:          err = UnpackGLfloat(L, data, len); break;
         case GL_DOUBLE:         err = UnpackGLdouble(L, data, len); break;

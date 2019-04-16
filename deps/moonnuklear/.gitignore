@@ -1,0 +1,9 @@
+*.log
+*.so
+*.dll
+*.bin
+*.swp
+*.o
+core.*
+local/
+src/TODO

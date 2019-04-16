@@ -771,10 +771,10 @@ void moongl_open_enums(lua_State *L)
     ADD(COMPRESSED_SIGNED_RED_RGTC1, "compressed signed red rgtc1");
     ADD(COMPRESSED_RG_RGTC2, "compressed rg rgtc2");
     ADD(COMPRESSED_SIGNED_RG_RGTC2, "compressed signed rg rgtc2");
-    ADD(COMPRESSED_RGBA_BPTC_UNORM, "compressed rgba bptc unorm");
-    ADD(COMPRESSED_SRGB_ALPHA_BPTC_UNORM, "compressed srgb alpha bptc unorm");
-    ADD(COMPRESSED_RGB_BPTC_SIGNED_FLOAT, "compressed rgb bptc signed float");
-    ADD(COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT, "compressed rgb bptc unsigned float");
+    //ADD(COMPRESSED_RGBA_BPTC_UNORM, "compressed rgba bptc unorm");
+    //ADD(COMPRESSED_SRGB_ALPHA_BPTC_UNORM, "compressed srgb alpha bptc unorm");
+    //ADD(COMPRESSED_RGB_BPTC_SIGNED_FLOAT, "compressed rgb bptc signed float");
+    //ADD(COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT, "compressed rgb bptc unsigned float");
     /* S3TC compressed */
     ADD(COMPRESSED_RGB_S3TC_DXT1_EXT, "compressed rgb s3tc dxt1 ext");
     ADD(COMPRESSED_SRGB_S3TC_DXT1_EXT, "compressed srgb s3tc dxt1 ext");

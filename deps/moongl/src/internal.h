@@ -33,6 +33,11 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
+
+#ifdef _WIN32
+#define __attribute__()  
+#endif
+
 #include "moongl.h"
 
 #define TOSTR_(x) #x

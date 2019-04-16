@@ -1,0 +1,19 @@
+
+[[context]]
+=== Context
+
+[[init]]
+* _context_ = *init*([<<font, _font_>>]) +
+[small]#Create a context. If no font is passed, one must
+be set using <<style_xxx, style_set_font>>(&nbsp;) before entering the event loop. +
+Rfr: nk_init_default(&nbsp;).#
+
+[[free]]
+* _context_$$:$$*free*( ) +
+[small]#Destroy a context. +
+Rfr: nk_free(&nbsp;).#
+
+[[context.font]]
+* <<font, _font_>> = _context_$$:$$*font*( ) +
+[small]#Returns an handle to the font in use by the _context_.#
+
