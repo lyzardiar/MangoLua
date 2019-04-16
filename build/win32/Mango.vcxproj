@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../deps/GLFW/include;$(SolutionDir)../../deps/gles/include;$(SolutionDir)../../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../deps/GLFW/include;$(SolutionDir)../../deps/gles/include;$(SolutionDir)../../src;$(SolutionDir)../../deps/lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -121,6 +121,46 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\deps\gles\include\gles\glew.h" />
+    <ClInclude Include="..\..\deps\gles\include\gles\glxew.h" />
+    <ClInclude Include="..\..\deps\gles\include\gles\wglew.h" />
+    <ClInclude Include="..\..\deps\GLFW\include\GLFW\glfw3.h" />
+    <ClInclude Include="..\..\deps\GLFW\include\GLFW\glfw3native.h" />
+    <ClInclude Include="..\..\deps\lua\lapi.h" />
+    <ClInclude Include="..\..\deps\lua\lauxlib.h" />
+    <ClInclude Include="..\..\deps\lua\lcode.h" />
+    <ClInclude Include="..\..\deps\lua\lctype.h" />
+    <ClInclude Include="..\..\deps\lua\ldebug.h" />
+    <ClInclude Include="..\..\deps\lua\ldo.h" />
+    <ClInclude Include="..\..\deps\lua\lfunc.h" />
+    <ClInclude Include="..\..\deps\lua\lgc.h" />
+    <ClInclude Include="..\..\deps\lua\ljumptab.h" />
+    <ClInclude Include="..\..\deps\lua\llex.h" />
+    <ClInclude Include="..\..\deps\lua\llimits.h" />
+    <ClInclude Include="..\..\deps\lua\lmem.h" />
+    <ClInclude Include="..\..\deps\lua\lobject.h" />
+    <ClInclude Include="..\..\deps\lua\lopcodes.h" />
+    <ClInclude Include="..\..\deps\lua\lopnames.h" />
+    <ClInclude Include="..\..\deps\lua\lparser.h" />
+    <ClInclude Include="..\..\deps\lua\lprefix.h" />
+    <ClInclude Include="..\..\deps\lua\lstate.h" />
+    <ClInclude Include="..\..\deps\lua\lstring.h" />
+    <ClInclude Include="..\..\deps\lua\ltable.h" />
+    <ClInclude Include="..\..\deps\lua\ltests.h" />
+    <ClInclude Include="..\..\deps\lua\ltm.h" />
+    <ClInclude Include="..\..\deps\lua\lua.h" />
+    <ClInclude Include="..\..\deps\lua\luaconf.h" />
+    <ClInclude Include="..\..\deps\lua\lualib.h" />
+    <ClInclude Include="..\..\deps\lua\lundump.h" />
+    <ClInclude Include="..\..\deps\lua\lvm.h" />
+    <ClInclude Include="..\..\deps\lua\lzio.h" />
+    <ClInclude Include="..\..\deps\moongl\src\bitfield.h" />
+    <ClInclude Include="..\..\deps\moongl\src\enums.h" />
+    <ClInclude Include="..\..\deps\moongl\src\func.h" />
+    <ClInclude Include="..\..\deps\moongl\src\internal.h" />
+    <ClInclude Include="..\..\deps\moongl\src\moongl.h" />
+    <ClInclude Include="..\..\deps\moongl\src\tree.h" />
+    <ClInclude Include="..\..\deps\moongl\src\wrangler.h" />
     <ClInclude Include="..\..\src\core\linmath.h" />
     <ClInclude Include="..\..\src\core\Singleton.h" />
     <ClInclude Include="..\..\src\platform\Log.h" />
@@ -128,6 +168,77 @@
     <ClInclude Include="..\..\src\platform\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\deps\lua\lapi.c" />
+    <ClCompile Include="..\..\deps\lua\lauxlib.c" />
+    <ClCompile Include="..\..\deps\lua\lbaselib.c" />
+    <ClCompile Include="..\..\deps\lua\lcode.c" />
+    <ClCompile Include="..\..\deps\lua\lcorolib.c" />
+    <ClCompile Include="..\..\deps\lua\lctype.c" />
+    <ClCompile Include="..\..\deps\lua\ldblib.c" />
+    <ClCompile Include="..\..\deps\lua\ldebug.c" />
+    <ClCompile Include="..\..\deps\lua\ldo.c" />
+    <ClCompile Include="..\..\deps\lua\ldump.c" />
+    <ClCompile Include="..\..\deps\lua\lfunc.c" />
+    <ClCompile Include="..\..\deps\lua\lgc.c" />
+    <ClCompile Include="..\..\deps\lua\linit.c" />
+    <ClCompile Include="..\..\deps\lua\liolib.c" />
+    <ClCompile Include="..\..\deps\lua\llex.c" />
+    <ClCompile Include="..\..\deps\lua\lmathlib.c" />
+    <ClCompile Include="..\..\deps\lua\lmem.c" />
+    <ClCompile Include="..\..\deps\lua\loadlib.c" />
+    <ClCompile Include="..\..\deps\lua\lobject.c" />
+    <ClCompile Include="..\..\deps\lua\lopcodes.c" />
+    <ClCompile Include="..\..\deps\lua\loslib.c" />
+    <ClCompile Include="..\..\deps\lua\lparser.c" />
+    <ClCompile Include="..\..\deps\lua\lstate.c" />
+    <ClCompile Include="..\..\deps\lua\lstring.c" />
+    <ClCompile Include="..\..\deps\lua\lstrlib.c" />
+    <ClCompile Include="..\..\deps\lua\ltable.c" />
+    <ClCompile Include="..\..\deps\lua\ltablib.c" />
+    <ClCompile Include="..\..\deps\lua\ltests.c" />
+    <ClCompile Include="..\..\deps\lua\ltm.c" />
+    <ClCompile Include="..\..\deps\lua\lundump.c" />
+    <ClCompile Include="..\..\deps\lua\lutf8lib.c" />
+    <ClCompile Include="..\..\deps\lua\lvm.c" />
+    <ClCompile Include="..\..\deps\lua\lzio.c" />
+    <ClCompile Include="..\..\deps\lua\onelua.c" />
+    <ClCompile Include="..\..\deps\moongl\src\bitfield.c" />
+    <ClCompile Include="..\..\deps\moongl\src\buffer.c" />
+    <ClCompile Include="..\..\deps\moongl\src\capabilities.c" />
+    <ClCompile Include="..\..\deps\moongl\src\debug.c" />
+    <ClCompile Include="..\..\deps\moongl\src\draw.c" />
+    <ClCompile Include="..\..\deps\moongl\src\enums.c" />
+    <ClCompile Include="..\..\deps\moongl\src\framebuffer.c" />
+    <ClCompile Include="..\..\deps\moongl\src\func.c" />
+    <ClCompile Include="..\..\deps\moongl\src\get.c" />
+    <ClCompile Include="..\..\deps\moongl\src\getintformat.c" />
+    <ClCompile Include="..\..\deps\moongl\src\getstring.c" />
+    <ClCompile Include="..\..\deps\moongl\src\getuniform.c" />
+    <ClCompile Include="..\..\deps\moongl\src\getvertex.c" />
+    <ClCompile Include="..\..\deps\moongl\src\hint.c" />
+    <ClCompile Include="..\..\deps\moongl\src\init.c" />
+    <ClCompile Include="..\..\deps\moongl\src\main.c" />
+    <ClCompile Include="..\..\deps\moongl\src\nongl.c" />
+    <ClCompile Include="..\..\deps\moongl\src\object.c" />
+    <ClCompile Include="..\..\deps\moongl\src\perfragment.c" />
+    <ClCompile Include="..\..\deps\moongl\src\pipeline.c" />
+    <ClCompile Include="..\..\deps\moongl\src\pixel.c" />
+    <ClCompile Include="..\..\deps\moongl\src\proginterface.c" />
+    <ClCompile Include="..\..\deps\moongl\src\program.c" />
+    <ClCompile Include="..\..\deps\moongl\src\query.c" />
+    <ClCompile Include="..\..\deps\moongl\src\raster.c" />
+    <ClCompile Include="..\..\deps\moongl\src\renderbuffer.c" />
+    <ClCompile Include="..\..\deps\moongl\src\sampler.c" />
+    <ClCompile Include="..\..\deps\moongl\src\shader.c" />
+    <ClCompile Include="..\..\deps\moongl\src\subroutine.c" />
+    <ClCompile Include="..\..\deps\moongl\src\sync.c" />
+    <ClCompile Include="..\..\deps\moongl\src\teximage.c" />
+    <ClCompile Include="..\..\deps\moongl\src\texture.c" />
+    <ClCompile Include="..\..\deps\moongl\src\transform.c" />
+    <ClCompile Include="..\..\deps\moongl\src\uniform.c" />
+    <ClCompile Include="..\..\deps\moongl\src\utils.c" />
+    <ClCompile Include="..\..\deps\moongl\src\vertex_array.c" />
+    <ClCompile Include="..\..\deps\moongl\src\whole_framebuffer.c" />
     <ClCompile Include="..\..\src\core\Singleton.cpp" />
     <ClCompile Include="..\..\src\platform\Log.cpp" />
     <ClCompile Include="..\..\src\platform\win32\main.cpp" />
