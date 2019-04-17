@@ -31,6 +31,10 @@
 #include "lauxlib.h"
 #include "lualib.h"
 
+#ifdef _WIN32
+#define __attribute__()  
+#endif
+
 struct moonnuklear_udata_s {
     RB_ENTRY(moonnuklear_udata_s) entry;
     uint64_t id; /* object id (search key) */

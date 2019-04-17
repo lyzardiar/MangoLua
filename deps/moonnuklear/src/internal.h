@@ -30,6 +30,10 @@
 #ifndef internalDEFINED
 #define internalDEFINED
 
+#ifdef _WIN32
+#define __attribute__()  
+#endif
+
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>

@@ -29,11 +29,29 @@
     <Filter Include="src\deps\GLFW">
       <UniqueIdentifier>{4e97f7cb-0b8c-418a-bee4-4e5d3f231534}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\deps\moongl">
-      <UniqueIdentifier>{bdbceb40-2e5f-4591-bf52-dad317d6cda2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\deps\lua5.3">
       <UniqueIdentifier>{2b370f0e-0ee7-4886-85de-11d5872b9c1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\moonimage">
+      <UniqueIdentifier>{5603383e-6d5b-4f47-9695-102df4cbba0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\stb">
+      <UniqueIdentifier>{48858bd0-3af0-49c5-b4c9-5551a8745e01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\moonnuklear">
+      <UniqueIdentifier>{7eab5588-aa6e-4e7f-8b8a-50bf872485d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\nuklear">
+      <UniqueIdentifier>{7f272537-0b4c-438a-a78e-0b0ec1c9b4b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\script">
+      <UniqueIdentifier>{3c31311c-57df-4942-bbb3-65f5be856f70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\moongl">
+      <UniqueIdentifier>{b5a19830-e422-4707-82e6-8eb4d3acd507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\moonglfw">
+      <UniqueIdentifier>{fa1dd2e6-fc5f-45aa-ada5-be1b42b35a36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -66,27 +84,6 @@
     </ClInclude>
     <ClInclude Include="..\..\deps\GLFW\include\GLFW\glfw3native.h">
       <Filter>src\deps\GLFW</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\deps\moongl\src\func.h">
-      <Filter>src\deps\moongl</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\deps\moongl\src\internal.h">
-      <Filter>src\deps\moongl</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\deps\moongl\src\moongl.h">
-      <Filter>src\deps\moongl</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\deps\moongl\src\tree.h">
-      <Filter>src\deps\moongl</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\deps\moongl\src\wrangler.h">
-      <Filter>src\deps\moongl</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\deps\moongl\src\bitfield.h">
-      <Filter>src\deps\moongl</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\deps\moongl\src\enums.h">
-      <Filter>src\deps\moongl</Filter>
     </ClInclude>
     <ClInclude Include="..\..\deps\lua\lctype.h">
       <Filter>src\deps\lua5.3</Filter>
@@ -172,6 +169,144 @@
     <ClInclude Include="..\..\deps\lua\lcode.h">
       <Filter>src\deps\lua5.3</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\deps\moonimage\src\moonimage.h">
+      <Filter>src\deps\moonimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonimage\src\internal.h">
+      <Filter>src\deps\moonimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_image.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_image_resize.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_image_write.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_leakcheck.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_perlin.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_rect_pack.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_sprintf.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_textedit.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_tilemap_editor.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_truetype.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_voxel_render.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stretchy_buffer.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_c_lexer.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_connected_components.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_divide.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_ds.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_dxt.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_easy_font.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\stb\stb_herringbone_wang_tile.h">
+      <Filter>src\deps\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\internal.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\moonnuklear.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\objects.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\style.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\tree.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\udata.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\debug.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonnuklear\src\enums.h">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\nuklear\nuklear.h">
+      <Filter>src\deps\nuklear</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\script\Script.h">
+      <Filter>src\script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moongl\src\func.h">
+      <Filter>src\deps\moongl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moongl\src\internal.h">
+      <Filter>src\deps\moongl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moongl\src\moongl.h">
+      <Filter>src\deps\moongl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moongl\src\tree.h">
+      <Filter>src\deps\moongl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moongl\src\wrangler.h">
+      <Filter>src\deps\moongl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moongl\src\bitfield.h">
+      <Filter>src\deps\moongl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moongl\src\enums.h">
+      <Filter>src\deps\moongl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonglfw\src\internal.h">
+      <Filter>src\deps\moonglfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonglfw\src\moonglfw.h">
+      <Filter>src\deps\moonglfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonglfw\src\pfn.h">
+      <Filter>src\deps\moonglfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonglfw\src\structs.h">
+      <Filter>src\deps\moonglfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonglfw\src\tree.h">
+      <Filter>src\deps\moonglfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonglfw\src\enums.h">
+      <Filter>src\deps\moonglfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\deps\moonglfw\src\getproc.h">
+      <Filter>src\deps\moonglfw</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\platform\Window.cpp">
@@ -188,6 +323,198 @@
     </ClCompile>
     <ClCompile Include="..\..\src\core\Singleton.cpp">
       <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lcorolib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lctype.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ldblib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ldebug.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ldo.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ldump.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lfunc.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lgc.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\linit.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\liolib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\llex.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lmathlib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lmem.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\loadlib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lobject.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lopcodes.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\loslib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lparser.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lstate.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lstring.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lstrlib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ltable.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ltablib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ltests.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\ltm.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lundump.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lutf8lib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lvm.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lzio.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lapi.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lauxlib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lbaselib.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\lua\lcode.c">
+      <Filter>src\deps\lua5.3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonimage\src\load.c">
+      <Filter>src\deps\moonimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonimage\src\main.c">
+      <Filter>src\deps\moonimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonimage\src\utils.c">
+      <Filter>src\deps\moonimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonimage\src\write.c">
+      <Filter>src\deps\moonimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\font.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\image.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\input.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\layout.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\main.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\nuklear.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\objects.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\panel.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\structs.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\style.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\tracing.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\udata.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\utils.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\versions.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\widgets.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\window.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\atlas.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\buffer.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\canvas.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\context.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\cursor.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\edit.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\enums.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moonnuklear\src\flags.c">
+      <Filter>src\deps\moonnuklear</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\script\Script.cpp">
+      <Filter>src\script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moongl\src\framebuffer.c">
+      <Filter>src\deps\moongl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\moongl\src\func.c">
+      <Filter>src\deps\moongl</Filter>
     </ClCompile>
     <ClCompile Include="..\..\deps\moongl\src\get.c">
       <Filter>src\deps\moongl</Filter>
@@ -294,113 +621,53 @@
     <ClCompile Include="..\..\deps\moongl\src\enums.c">
       <Filter>src\deps\moongl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\moongl\src\framebuffer.c">
-      <Filter>src\deps\moongl</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\id.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\moongl\src\func.c">
-      <Filter>src\deps\moongl</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\input.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lcorolib.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\main.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lctype.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\mon.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ldblib.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\monitor.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ldebug.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\native.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ldo.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\utils.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ldump.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\vulkan.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lfunc.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\win.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lgc.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\window.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\linit.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\callbacks.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\liolib.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\context.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\llex.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\cur.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lmathlib.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\enums.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lmem.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\getproc.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\deps\lua\loadlib.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lobject.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lopcodes.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\loslib.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lparser.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lstate.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lstring.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lstrlib.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ltable.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ltablib.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ltests.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\ltm.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lundump.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lutf8lib.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lvm.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lzio.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\onelua.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lapi.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lauxlib.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lbaselib.c">
-      <Filter>src\deps\lua5.3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\deps\lua\lcode.c">
-      <Filter>src\deps\lua5.3</Filter>
+    <ClCompile Include="..\..\deps\moonglfw\src\hint.c">
+      <Filter>src\deps\moonglfw</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

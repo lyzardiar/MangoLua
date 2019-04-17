@@ -5,6 +5,7 @@
 
 #include "WindowWin32.h"
 #include "../Log.h"
+#include "script/Script.h"
 
 using namespace mango;
 
@@ -108,9 +109,9 @@ mango::WindowWin32::~WindowWin32() {
 }
 
 bool WindowWin32::Init(int w, int h) {
-	initGlfw(w, h);
-	initGlew();
 
+	/************************************************************************/
+	/*
 	GLuint vertex_buffer, vertex_shader, fragment_shader, program;
 	GLint mvp_location, vpos_location, vcol_location;
 
@@ -138,7 +139,6 @@ bool WindowWin32::Init(int w, int h) {
 	glVertexAttribPointer(vcol_location, 3, GL_FLOAT, GL_FALSE,
 		sizeof(float) * 5, (void*)(sizeof(float) * 2));
 
-	while (!glfwWindowShouldClose(_window)) {
 		float ratio;
 		int width, height;
 		mat4x4 m, p, mvp;
@@ -152,14 +152,28 @@ bool WindowWin32::Init(int w, int h) {
 		mat4x4_mul(mvp, p, m);
 		glUseProgram(program);
 		glUniformMatrix4fv(mvp_location, 1, GL_FALSE, (const GLfloat*)mvp);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawArrays(GL_TRIANGLES, 0, 3);                                                                     */
+	/************************************************************************/
+
+	//initGlfw(w, h);
+	//initGlew();
+
+	Script::instance.Load();
+	Script::instance.RunScript("require('src.main')");
+	//initGlew();
+	Script::instance.RunScript("Start()");
+
+	/*
+	while (!glfwWindowShouldClose(_window)) {
+
+		Script::instance.RunScript("Update()");
 
 		glfwSwapBuffers(_window);
 		glfwPollEvents();
 	}
 	glfwDestroyWindow(_window);
 	glfwTerminate();
-
+	*/
 	return true;
 }
 
@@ -170,7 +184,7 @@ bool WindowWin32::initGlfw(int w, int h) {
 	}
 	_width = w;
 	_height = h;
-
+	   	 
 	_view = glfwCreateWindow(_width, _height, "Mango Engine", nullptr, nullptr);
 	_window = (GLFWwindow*)_view;
 	if (!_window) {

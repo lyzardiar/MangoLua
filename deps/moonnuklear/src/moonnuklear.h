@@ -57,7 +57,7 @@ extern lua_State *moonnuklear_L;
 #define NK_COS cosf
 #define NK_SQRT sqrtf
 #include <math.h>
-#include "nuklear/nuklear.h"
+#include "nuklear.h"
 
 
 #endif /* moonnuklearDEFINED */

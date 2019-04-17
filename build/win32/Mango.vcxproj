@@ -69,15 +69,19 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../deps/GLFW/include;$(SolutionDir)../../deps/gles/include;$(SolutionDir)../../src;$(SolutionDir)../../deps/lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../deps/GLFW/include;$(SolutionDir)../../deps/gles/include;$(SolutionDir)../../src;$(SolutionDir)../../deps/lua;$(SolutionDir)../../deps/stb;$(SolutionDir)../../deps/nuklear;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
+      <ObjectFileName>$(IntDir)$(IntDir)%(RelativeDir)\</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)../../deps/GLFW/lib;$(SolutionDir)../../deps/gles/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -154,6 +158,13 @@
     <ClInclude Include="..\..\deps\lua\lundump.h" />
     <ClInclude Include="..\..\deps\lua\lvm.h" />
     <ClInclude Include="..\..\deps\lua\lzio.h" />
+    <ClInclude Include="..\..\deps\moonglfw\src\enums.h" />
+    <ClInclude Include="..\..\deps\moonglfw\src\getproc.h" />
+    <ClInclude Include="..\..\deps\moonglfw\src\internal.h" />
+    <ClInclude Include="..\..\deps\moonglfw\src\moonglfw.h" />
+    <ClInclude Include="..\..\deps\moonglfw\src\pfn.h" />
+    <ClInclude Include="..\..\deps\moonglfw\src\structs.h" />
+    <ClInclude Include="..\..\deps\moonglfw\src\tree.h" />
     <ClInclude Include="..\..\deps\moongl\src\bitfield.h" />
     <ClInclude Include="..\..\deps\moongl\src\enums.h" />
     <ClInclude Include="..\..\deps\moongl\src\func.h" />
@@ -161,11 +172,43 @@
     <ClInclude Include="..\..\deps\moongl\src\moongl.h" />
     <ClInclude Include="..\..\deps\moongl\src\tree.h" />
     <ClInclude Include="..\..\deps\moongl\src\wrangler.h" />
+    <ClInclude Include="..\..\deps\moonimage\src\internal.h" />
+    <ClInclude Include="..\..\deps\moonimage\src\moonimage.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\debug.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\enums.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\internal.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\moonnuklear.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\objects.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\style.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\tree.h" />
+    <ClInclude Include="..\..\deps\moonnuklear\src\udata.h" />
+    <ClInclude Include="..\..\deps\nuklear\nuklear.h" />
+    <ClInclude Include="..\..\deps\stb\stb.h" />
+    <ClInclude Include="..\..\deps\stb\stb_connected_components.h" />
+    <ClInclude Include="..\..\deps\stb\stb_c_lexer.h" />
+    <ClInclude Include="..\..\deps\stb\stb_divide.h" />
+    <ClInclude Include="..\..\deps\stb\stb_ds.h" />
+    <ClInclude Include="..\..\deps\stb\stb_dxt.h" />
+    <ClInclude Include="..\..\deps\stb\stb_easy_font.h" />
+    <ClInclude Include="..\..\deps\stb\stb_herringbone_wang_tile.h" />
+    <ClInclude Include="..\..\deps\stb\stb_image.h" />
+    <ClInclude Include="..\..\deps\stb\stb_image_resize.h" />
+    <ClInclude Include="..\..\deps\stb\stb_image_write.h" />
+    <ClInclude Include="..\..\deps\stb\stb_leakcheck.h" />
+    <ClInclude Include="..\..\deps\stb\stb_perlin.h" />
+    <ClInclude Include="..\..\deps\stb\stb_rect_pack.h" />
+    <ClInclude Include="..\..\deps\stb\stb_sprintf.h" />
+    <ClInclude Include="..\..\deps\stb\stb_textedit.h" />
+    <ClInclude Include="..\..\deps\stb\stb_tilemap_editor.h" />
+    <ClInclude Include="..\..\deps\stb\stb_truetype.h" />
+    <ClInclude Include="..\..\deps\stb\stb_voxel_render.h" />
+    <ClInclude Include="..\..\deps\stb\stretchy_buffer.h" />
     <ClInclude Include="..\..\src\core\linmath.h" />
     <ClInclude Include="..\..\src\core\Singleton.h" />
     <ClInclude Include="..\..\src\platform\Log.h" />
     <ClInclude Include="..\..\src\platform\win32\WindowWin32.h" />
     <ClInclude Include="..\..\src\platform\Window.h" />
+    <ClInclude Include="..\..\src\script\Script.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\deps\lua\lapi.c" />
@@ -201,7 +244,22 @@
     <ClCompile Include="..\..\deps\lua\lutf8lib.c" />
     <ClCompile Include="..\..\deps\lua\lvm.c" />
     <ClCompile Include="..\..\deps\lua\lzio.c" />
-    <ClCompile Include="..\..\deps\lua\onelua.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\callbacks.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\context.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\cur.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\enums.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\getproc.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\hint.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\id.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\input.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\main.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\mon.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\monitor.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\native.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\utils.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\vulkan.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\win.c" />
+    <ClCompile Include="..\..\deps\moonglfw\src\window.c" />
     <ClCompile Include="..\..\deps\moongl\src\bitfield.c" />
     <ClCompile Include="..\..\deps\moongl\src\buffer.c" />
     <ClCompile Include="..\..\deps\moongl\src\capabilities.c" />
@@ -239,11 +297,40 @@
     <ClCompile Include="..\..\deps\moongl\src\utils.c" />
     <ClCompile Include="..\..\deps\moongl\src\vertex_array.c" />
     <ClCompile Include="..\..\deps\moongl\src\whole_framebuffer.c" />
+    <ClCompile Include="..\..\deps\moonimage\src\load.c" />
+    <ClCompile Include="..\..\deps\moonimage\src\main.c" />
+    <ClCompile Include="..\..\deps\moonimage\src\utils.c" />
+    <ClCompile Include="..\..\deps\moonimage\src\write.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\atlas.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\buffer.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\canvas.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\context.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\cursor.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\edit.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\enums.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\flags.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\font.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\image.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\input.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\layout.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\main.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\nuklear.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\objects.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\panel.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\structs.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\style.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\tracing.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\udata.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\utils.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\versions.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\widgets.c" />
+    <ClCompile Include="..\..\deps\moonnuklear\src\window.c" />
     <ClCompile Include="..\..\src\core\Singleton.cpp" />
     <ClCompile Include="..\..\src\platform\Log.cpp" />
     <ClCompile Include="..\..\src\platform\win32\main.cpp" />
     <ClCompile Include="..\..\src\platform\win32\WindowWin32.cpp" />
     <ClCompile Include="..\..\src\platform\Window.cpp" />
+    <ClCompile Include="..\..\src\script\Script.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

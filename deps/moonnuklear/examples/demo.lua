@@ -1,7 +1,7 @@
 #!/usr/bin/env lua
 -- This is a Lua porting of the demo that comes with Nuklear (nuklear/demo/).
-
-local nk = require("moonnuklear")
+print(1)
+local nk = moonnuklear
 local backend = require("backend")
 -- These are some examples to provide a small overview of what can be done
 -- with this library:
@@ -85,8 +85,12 @@ local function demogui(ctx)
    node_editor(ctx)
 end
 
+function Update(ctx)
+   demogui(ctx)
+end
+
 -- Init the backend and enter the event loop:
-ctx = backend.init(1200, 800, "MoonNuklear Demo", true, nil)
-set_style(ctx, THEME)
-backend.loop(demogui, BGCOLOR, 30)
+-- ctx = backend.init(1200, 800, "MoonNuklear Demo", true, nil)
+-- set_style(ctx, THEME)
+-- backend.loop(demogui, BGCOLOR, 30)
 

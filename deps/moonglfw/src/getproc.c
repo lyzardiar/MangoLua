@@ -37,7 +37,7 @@ moonglfw_dt_t glfw;   /* dispatch table */
 #define LIBNAME "libglfw.so"
 static void *Handle = NULL;
 
-#elif defined(MINGW)
+#elif defined(MINGW) || defined(_WIN32)
 #include <windows.h>
 #define LIBNAME "glfw3.dll"
 #define LLIBNAME L"glfw3.dll"
@@ -70,7 +70,7 @@ static int Init(lua_State *L)
     FP(glfw.fn) = dlsym(Handle, "glfw"#fn);                         \
 } while(0)
 
-#elif defined(MINGW)
+#elif defined(MINGW) || defined(_WIN32)
     Handle = LoadLibraryW(LLIBNAME);
     if(!Handle)
         return luaL_error(L, "cannot load "LIBNAME);
